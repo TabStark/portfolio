@@ -1,0 +1,975 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    --textColorOne: white;
+    --textColorTwo: rgb(13, 218, 254);
+    --textColorThree: black;
+    --textColorFour: rgb(238, 229, 211);
+    --textColorFive: rgb(80, 80, 79);
+    --scrollbarBG: rgb(225, 224, 224);
+    --thumbBG: black;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+@font-face {
+    font-family: CustomFont;
+    src: url(fonts/OliveAndCitrusDemo-L3d0D.ttf);
+}
+@font-face {
+    font-family: CustomFontOne;
+    src: url(fonts/DebugFreeTrial-MVdYB.otf);
+}
+
+body {
+    background-color: rgb(11, 11, 11);
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    z-index: 2;
+    box-shadow: 0px 0px 30px rgb(61, 62, 62);
+
+}
+
+.logo p {
+    font-weight: bold;
+    font-size: 2rem;
+    animation: slideLeft 1s forwards;
+    opacity: 0;
+    color: var(--textColorOne);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu ul li a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--textColorOne);
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.menu ul li .active {
+    color: var(--textColorTwo);
+}
+
+.menu ul li a:hover {
+    color: greenyellow;
+}
+
+.newNavbar {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    z-index: 2;
+    background-color: var(--textColorThree);
+    height: 60px;
+    padding-top: 15px;
+    box-shadow: 0px 0px 30px rgb(61, 62, 62);
+    display: none;
+}
+
+.menuOne ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menuOne ul li a {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    /* margin: 0px 30px; */
+    font-size: .8rem;
+    font-weight: 600;
+    color: var(--textColorOne);
+    transition: 0.3s all;
+    animation: navMenu 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.menuOne ul li a i {
+    margin: 0px auto;
+}
+
+.menuOne ul li .active {
+    color: var(--textColorTwo);
+}
+
+.menuOne ul li a:hover {
+    color: greenyellow;
+}
+
+.container {
+    position: relative;
+    top: 80px;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--textColorThree);
+
+}
+
+.progfile {
+    position: relative;
+    width: 50%;
+}
+
+#bgset {
+    width: 100%;
+    height: 91vh;
+}
+
+#profileimg {
+    position: absolute;
+    right: 25%;
+    top: 30%;
+    width: 50%;
+    border: 2px solid var(--textColorTwo);
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px rgb(51, 106, 246);
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.altprogfile {
+    background-color: white;
+    width: 100%;
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    padding-left: 100px;
+}
+
+.content p {
+    font-size: 2rem;
+    color: var(--textColorOne);
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin: 10px 0px;
+    animation: name 1s ease forwards;
+    animation-delay: .3s;
+    opacity: 0;
+    color: var(--textColorOne);
+}
+
+.content span {
+    color: var(--textColorTwo);
+    font-weight: bold;
+}
+
+.part1 {
+    animation: part1 1s ease forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.part2 {
+    animation: part1 1s ease forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+
+.icons {
+    width: 40%;
+}
+
+.icons ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.icons ul li {
+    list-style: none;
+}
+
+.icons ul li a {
+    font-size: 2rem;
+    color: var(--textColorOne);
+}
+
+.icons ul li a i {
+    color: var(--textColorOne);
+    transition: 0.3s;
+    animation: logoicon 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+    opacity: 0;
+}
+
+.icons ul li a i:hover {
+    color: greenyellow;
+    transform: scale(1.1);
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--textColorTwo);
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    animation: download 1s ease forwards;
+    animation-delay: 1s;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.btn button:hover {
+    box-shadow: inset 0px 0px 100px greenyellow;
+}
+
+#about {
+    display: flex;
+    position: relative;
+    top: 82px;
+    background-color: transparent;
+    padding-top: 100px;
+}
+
+.aboutme {
+    width: 80%;
+    padding: 40px;
+    text-align: justify;
+    backdrop-filter: blur(50px);
+    border: 2px solid rgb(232, 230, 230);
+    color: var(--textColorThree);
+    background-color: var(--textColorOne);
+}
+
+.aboutme span {
+    font-weight: bold;
+    font-family: 'Castoro', serif;
+}
+
+.aboutme h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: var(--textColorTwo);
+}
+
+.aboutme p {
+    font-family: 'Castoro', serif;
+}
+
+.empty {
+    background-color: black;
+    width: 20%;
+}
+
+#project {
+    position: relative;
+    top: 100px;
+    padding-top: 100px;
+    height: 100vh;
+    margin-bottom: 70px;
+}
+
+.projectclass h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: var(--textColorTwo);
+    text-align: center;
+}
+
+/* swiper CSS */
+.swiper {
+    width: 80%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 80%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 280px;
+    height: 320px;
+    margin: 0px 20px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0002, #0004);
+}
+
+.inner-box {
+    position: relative;
+    background-image: url(images/check.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.card-front img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    height: 93%;
+    width: 93%;
+    cursor: pointer;
+}
+
+
+.card-back {
+    transform: rotateX(180deg);
+    padding: 10px;
+
+}
+
+.card-back p {
+    font-size: 1.8rem;
+    font-family: 'Castoro', serif;
+}
+
+.card-back .langName {
+    font-size: 1rem;
+}
+
+.card-back .open {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+.language {
+    margin: 15px 0px;
+}
+
+.language i {
+    font-size: 3rem;
+}
+
+.fa-html5 {
+    color: orange;
+}
+
+.fa-css3-alt {
+    color: blue;
+}
+
+.fa-bootstrap {
+    color: purple;
+}
+
+.fa-js {
+    color: yellow;
+    background-color: black;
+}
+
+.host {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.host i {
+    font-size: 4rem;
+    height: auto;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-globe {
+    color: rgb(4, 250, 168);
+}
+
+.host .fa-github:hover {
+    color: var(--textColorTwo);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.host .fa-globe:hover {
+    color: var(--textColorTwo);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.swiper-slide:hover .inner-box {
+    transform: rotateX(180deg);
+}
+
+#contactsec {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+#contactsec h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--textColorTwo);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 40px;
+}
+
+.contactme {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mycontact {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30vh;
+}
+
+.myinfo {
+    display: flex;
+}
+
+.myinfo i {
+    font-size: 2rem;
+    margin: 0px 20px;
+    color: var(--textColorTwo);
+}
+
+.myinfo p {
+    color: white;
+}
+
+.myinfo .fa-brands:hover {
+    color: greenyellow;
+}
+
+.contactUser {
+    width: 40%;
+}
+
+.contactUser form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactUser form input {
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    padding: 0px 10px;
+    color: black;
+    background-color: rgb(228, 225, 225);
+    border: none;
+    border: 1px solid var(--textColorTwo);
+    border-radius: 5px;
+}
+
+.contactUser form input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+.contactUser form textarea {
+    margin-top: 20px;
+    width: 80%;
+    padding: 5px 10px;
+    color: black;
+    background-color: rgb(228, 225, 225);
+    border: 1px solid var(--textColorTwo);
+    border-radius: 5px;
+}
+
+.contactUser form textarea:focus {
+    outline: none;
+}
+
+.contactUser form button {
+    margin-top: 20px;
+    width: 150px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: var(--textColorTwo);
+    color: white;
+    font-size: 20px;
+    border: none;
+}
+
+.contactUser form button:hover {
+    background-color: greenyellow;
+}
+
+#msgbox {
+    z-index: 99999;
+    width: 100%;
+    position: fixed;
+    top: 10px;
+    transition: 0.3s;
+    display: none;
+}
+
+.msg {
+    background-color: black;
+    width: 300px;
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 0px auto;
+    padding: 0px 12px;
+}
+
+.msg P {
+    color: greenyellow;
+    text-align: center;
+    margin-top: 10px;
+    font-size: .8rem;
+}
+
+.line {
+    position: relative;
+    margin: 0px auto;
+}
+
+.line:before {
+    margin: 0px auto;
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    border-bottom: 1px solid greenyellow;
+    animation: border_anim 4s linear forwards;
+}
+
+#spinnersec {
+    position: fixed;
+    top: 35%;
+    width: 100%;
+    z-index: 99999;
+    display: none;
+}
+
+.forspin {
+    width: 300px;
+    height: 150px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(69, 68, 68, 0.577);
+}
+
+.loader {
+    /* margin: 0px auto; */
+    width: 48px;
+    height: 48px;
+    border: 4px solid var(--textColorTwo);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    width: 100%;
+    height: 75px;
+    box-shadow: 0px 0px 30px rgb(61, 62, 62);
+    padding-top: 25px;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+}
+
+@keyframes border_anim {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes navMenu {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes part1 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes part2 {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes name {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes logoicon {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes download {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Media Querie */
+@media (max-width:990px) {
+    .progfile {
+        width: 40%;
+    }
+
+    #profileimg {
+        right: 12%;
+        width: 55%;
+    }
+
+    #project {
+        height: 114vh;
+    }
+}
+
+@media (max-width:950px) {
+    /* .content p {
+        font-size: 1.8rem;
+    } */
+}
+
+@media (max-width: 900px) {
+    .menu ul li a {
+        margin: 0px 20px;
+    }
+
+
+    #profileimg {
+        position: absolute;
+        right: 10%;
+        top: 30%;
+        width: 60%;
+    }
+
+    .content p {
+        font-size: 1.8rem;
+    }
+
+    content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        padding-left: 80px;
+    }
+}
+
+@media (max-width: 850px) {
+    #profileimg {
+        top: 34%;
+    }
+
+    .contactUser form input {
+        width: 100%;
+    }
+
+    .contactUser form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width:800px) {
+    .content {
+        padding-left: 70px;
+    }
+
+    .menu ul li a {
+        font-size: 1rem;
+    }
+
+    #profileimg {
+        position: absolute;
+        right: 5%;
+        top: 30%;
+        width: 70%;
+    }
+
+}
+
+@media (max-width:750px) {
+    .content h1 {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width:700px) {
+    body {
+        padding-bottom: 60px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        top: 0px;
+        height: 900px;
+    }
+
+    .progfile {
+        display: none;
+    }
+
+    .altprogfile {
+        display: block;
+        height: 100vh;
+    }
+
+    .dabba {
+        position: relative;
+        bottom: -160px;
+        width: 250px;
+        margin: 15px auto;
+        margin-bottom: 0px;
+
+    }
+
+    #altprofileimg {
+        width: 100%;
+        border: 2px solid var(--textColorTwo);
+        border-radius: 50%;
+        box-shadow: 0px 0px 30px rgb(51, 106, 246);
+        animation: zoomIn 1s ease forwards;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+
+    .content {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    #about {
+        top: 0px;
+    }
+
+    .empty {
+        width: 10%;
+    }
+
+    .aboutme {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .newNavbar {
+        display: block;
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+
+    .logo p {
+        margin-left: 20px;
+    }
+
+    .projectNameSlide {
+        display: none;
+    }
+}
+
+@media (max-width:650px) {
+    .contactme {
+        flex-direction: column;
+    }
+
+    .contactUser {
+        width: 300px;
+        margin-top: 50px;
+    }
+
+    #contactsec {
+        height: 150vh;
+        padding-bottom: 100px;
+    }
+
+    .mycontact {
+        width: 300px;
+    }
+}
+
+@media (max-width:500px) {
+    .content {
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 400px) {
+    .swiper {
+        width: 90%;
+        height: 90%;
+    }
+
+    .myinfo i {
+        font-size: 1.7rem;
+        margin: 0px 10px;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+}

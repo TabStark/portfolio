@@ -1,0 +1,17 @@
+<script>
+    // let a =[1,2,3,4,5]
+    // let b =[6,7,8,9,0,1]
+
+    // let swiper = 5
+
+    // if(a[4]==swiper){
+    //     console.log(`a value is ${swiper}`)
+    //     console.log(`b value is ${b[swiper]}`)
+    // }
+    async function project(i){
+    let response = await fetch("script.json")
+    let result = await response.json()
+    console.log(result.Project_Data[i].Git_link)
+}
+project(0)
+</script>

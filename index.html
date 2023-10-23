@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Tektur:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Tab Portfolio</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <p id="logo">Tabrez Portfolio</p>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#home" class="active" style="--i:1">Home</a></li>
+                <li><a href="#about" style="--i:2">About</a></li>
+                <li><a href="#project" style="--i:3">Project</a></li>
+                <li><a href="#contactsec" style="--i:4">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="newNavbar">
+        <div class="menuOne">
+            <ul>
+                <li><a href="#home" class="active" style="--i:1"><i class="fa-solid fa-house-user"></i>Home</a></li>
+                <li><a href="#about" style="--i:2"><i class="fa-regular fa-user"></i>About</a></li>
+                <li><a href="#project" style="--i:3"><i class="fa-solid fa-diagram-project"></i>Project</a></li>
+                <li><a href="#contactsec" style="--i:4"><i class="fa-solid fa-phone"></i>Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="container">
+            <div class="content">
+                <p class="part1">Hello, I am</p>
+                <h1>Tabrez Ahmed</h1>
+                <div class="txtchange">
+                    <p class="part2" id="runtxt">And I am a <br> <span id="change-txt"></span></p>
+                </div>
+                <div class="icons">
+                    <ul>
+                        <li><a href="https://www.instagram.com/tabstark_/" target="_blank"><i
+                                    class="fa-brands fa-instagram" style="--i:5"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/s-tabrez-ahmed-b5bb1a211/" target="_blank"><i
+                                    class="fa-brands fa-linkedin" style="--i:6"></i></a></li>
+                        <li><a href="https://github.com/TabStark" target="_blank"><i class="fa-brands fa-github"
+                                    style="--i:7"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="btn">
+                    <button id="downloadResume">Download CV</button>
+                </div>
+            </div>
+            <div class="progfile">
+                <img id="bgset" src="images/bgset.png" alt="">
+                <img id="profileimg" src="images/image.jpg" alt="">
+            </div>
+            <div class="altprogfile">
+                <div class="dabba">
+                    <img id="altprofileimg" src="images/image.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="empty"></div>
+        <div class="aboutme">
+            <h1>About Me</h1>
+            <p>Hello, I'm <span>Tabrez Ahmed</span>, a dedicated Bachelor of Computer Science student with a strong
+                foundation in
+                web development technologies and mobile app development. My journey in the world of technology began
+                with a curiosity for crafting immersive digital experiences and solving real-world problems.</p>
+            <br>
+            <h3>Key Expertise:</h3>
+            <p>Front-End Development: Proficient in HTML, CSS, and JavaScript, I specialize in building captivating
+                and responsive user interfaces. I have a keen eye for design and a commitment to delivering seamless
+                web experiences.</p>
+            <p>Mobile App Development: I have hands-on experience with Flutter and Dart, allowing me to create
+                cross-platform mobile applications that combine functionality with aesthetics.</p>
+            <br>
+            <h3>Passion for Innovation:</h3>
+            <p>My passion lies in leveraging technology to create meaningful and user-centric solutions. I'm
+                fascinated by the ever-evolving nature of the tech industry and am always eager to explore emerging
+                trends and best practices.</p>
+            <br>
+            <h3>Project Highlights:</h3>
+            <p>Throughout my academic journey, I've undertaken various projects that showcase my skills and
+                creativity. Some notable accomplishments include:</p>
+            <br>
+            <p>Mention Project</p>
+            <br>
+            <h3>Continuous Learning:</h3>
+            <p>As a tech enthusiast, I understand the importance of staying updated with the latest industry
+                advancements. I'm committed to continuous learning and enjoy taking on new challenges to expand my
+                skill set.</p>
+            <br>
+            <h3>Collaboration and Growth:</h3>
+            <p>I believe that collaboration is at the heart of innovation. I have experience working in
+                collaborative environments, both in academic settings and through personal projects. These
+                experiences have not only enhanced my technical abilities but also my communication and teamwork
+                skills.</p>
+            <br>
+            <h3>Let's Connect:</h3>
+            <p>I'm always excited to connect with fellow tech enthusiasts, mentors, and potential collaborators.
+                Whether you're interested in discussing a project, sharing knowledge, or exploring opportunities for
+                collaboration, please feel free to reach out. Let's embark on a journey of innovation together.</p>
+            <br>
+            <p>Thank you for visiting my portfolio, and I look forward to the exciting possibilities that the world
+                of technology has to offer.</p>
+        </div>
+    </section>
+
+    <section id="project">
+        <div class="projectclass">
+            <h1>Projects</h1>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper" id="slider1">
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p1.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleOne">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitOne">
+
+                                </div>
+                                <div id="netlifyOne">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p2.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleTwo">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-bootstrap"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitTwo">
+
+                                </div>
+                                <div id="netlifyTwo">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p3.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleThree">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitThree">
+
+                                </div>
+                                <div id="netlifyThree">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p4.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleFour">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitFour">
+
+                                </div>
+                                <div id="netlifyFour">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p5.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleFive">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitFive">
+
+                                </div>
+                                <div id="netlifyFive">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p6.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="titleSix">Title</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <div id="gitSix">
+
+                                </div>
+                                <div id="netlifySix">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="inner-box">
+                        <div class="card-front">
+                            <img src="images/p7.png" />
+                        </div>
+                        <div class="card-back">
+                            <p id="">ChatGPT</p>
+                            <div class="language">
+                                <p class="langName">Languages</p>
+                                <i class="fa-brands fa-html5"></i>
+                                <i class="fa-brands fa-css3-alt"></i>
+                                <i class="fa-brands fa-js"></i>
+                            </div>
+                            <p class="open">Open in:</p>
+                            <div class="host">
+                                <p>Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contactsec">
+        <h1>Contact Me</h1>
+        <div class="contactme">
+            <div class="mycontact">
+                <div class="myinfo">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p id="mail_id">tabrezahmedsta1@gmail.com</p>
+                </div>
+                <div class="myinfo">
+                    <i class="fa-solid fa-phone"></i>
+                    <p id="phone_no">82707 06893</p>
+                </div>
+                <div class="myinfo">
+                    <a href="https://www.instagram.com/tabstark_/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/s-tabrez-ahmed-b5bb1a211/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/TabStark" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contactUser">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" id="username">
+                    <input type="email" name="Email" placeholder="Your Email" id="useremail">
+                    <textarea name="Message" rows="6" placeholder="Your Message" id="usermsg"></textarea>
+                    <button type="submit" id="sub">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="msgbox">
+        <div class="msg">
+            <p id="msgtitle"></p>
+            <div class="line">
+            </div>
+        </div>
+    </div>
+
+    <div id="spinnersec">
+        <div class="forspin">
+            <span class="loader"></span>
+        </div>
+    </div>
+    
+    <footer>
+        <p>@2023 All Copy RIghts Reserved</p>
+    </footer>
+</body>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+
+</html>
