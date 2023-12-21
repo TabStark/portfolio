@@ -177,5 +177,5 @@ form.addEventListener('submit', e => {
 })
 
 downloadResume.addEventListener("click", () => {
-    window.open("images/bgset.png")
+    window.open("images/S-TABREZ-AHMED.pdf")
 })
