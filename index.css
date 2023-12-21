@@ -46,6 +46,14 @@ body {
 
 }
 
+.flutter{
+    margin: 0px auto;
+    width: 50px;
+}
+.flutter img{
+    width: 100%;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -126,8 +134,8 @@ nav {
     font-weight: 600;
     color: var(--textColorOne);
     transition: 0.3s all;
-    animation: navMenu 1s ease forwards;
-    animation-delay: calc(0.2s * var(--i));
+  
+    
     opacity: 0;
 }
 
@@ -364,9 +372,10 @@ nav {
 
 .card-front img {
     display: block;
-    width: 100%;
+    width: 90%;
     height: 100%;
     cursor: pointer;
+    margin: 0px auto;
 }
 
 .card-front,
@@ -386,7 +395,7 @@ nav {
 }
 
 .card-back p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-family: 'Castoro', serif;
 }
 

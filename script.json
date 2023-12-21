@@ -41,6 +41,34 @@
             "Project_Name": "Weather Forecast",
             "Git_link": "https://github.com/TabStark/weather-forecast",
             "Netlify_link": "https://starkweatherapp.netlify.app"
+        },
+        {
+            "id": "7",
+            "project_id": "No_7",
+            "Project_Name": "Task Manager App",
+            "Git_link": "https://github.com/TabStark/task_manager_app",
+            "Netlify_link": ""
+        },
+        {
+            "id": "8",
+            "project_id": "No_8",
+            "Project_Name": "Travel Planner App",
+            "Git_link": "https://github.com/TabStark/travel_planning_app",
+            "Netlify_link": ""
+        },
+        {
+            "id": "9",
+            "project_id": "No_9",
+            "Project_Name": "Covid App",
+            "Git_link": "https://github.com/TabStark/covid_app",
+            "Netlify_link": ""
+        },
+        {
+            "id": "10",
+            "project_id": "No_10",
+            "Project_Name": "Money Tracker App",
+            "Git_link": "https://github.com/TabStark/personal_finance_tracker",
+            "Netlify_link": ""
         }
     ]
 }
